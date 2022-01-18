@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jScriptfile.js"></script>
+    <script src = "question.js"></script>
+
+    <link rel = "stylesheet" href ="stylesheet.css">
+
+</head>
+<body>
+    <div id = "main">
+    <figure>
+        <figcaption>The Quiz <span class = "red" >Game</span><br>By AdilChorfi</figcaption>
+    </figure>
+
+
+    </div>
+    
+    <div style = "display: flex;justify-content: space-between";>
+        <label id = "score">Score: 0</label>
+        <label id = "round">Round: 0</label>
+    </div>
+
+  
+    <main>
+        <p id = "question">Are you Ready to test your knowledge ?<br>When you are ready click to the button bellow </p>
+
+        <button id ="btn" onclick = "startQuestion()">Start the Game</button> 
+        <button id = "subButton" onclick="submitAnswer()" >Submit</button>
+
+
+        <p id = "message">choose the correct answer :</p>
+        <form id="form" >
+
+          </form>
+
+        <!--<button id = "subButton" onclick="submitAnswer()" >Submit</button>-->
+
+        <p id = info></p><label id = "countDown"></label>
+        
+
+
+
+    </main>
+        
+        <div>
+
+        </div>
+        
+    
+    </div>
+    <footer></footer>
+</body>
+</html>
