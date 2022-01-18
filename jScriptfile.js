@@ -1,3 +1,5 @@
+import {qQuestion} from "./question.js"
+
 let round = 0
 let score = 0;
 let correct_ = []
@@ -56,7 +58,7 @@ function randomRange(v1, v2)
         //console.log(question)
         // console.log(allAnswers)
         let shuffledAnswers = shuffleArray(allAnswers) // shuffle the answers so we cant have always the correct answer on the first index
-        
+
         //creating a div inside the form so we can remove it later 
 
         const divQuestion = document.createElement("div");
@@ -160,7 +162,7 @@ function randomRange(v1, v2)
         
 
             }, 3000);
-        if(typeof(document.getElementById("divId")) != 'undefined')
+        if(document.body.contains(document.getElementById("divId")) == true)
         // in case you submit without selection any radio input
         {
             document.getElementById("divId").remove()
@@ -171,4 +173,5 @@ function randomRange(v1, v2)
 
 
 
-    
+document.getElementById("btn").addEventListener("click", startQuestion)
+document.getElementById("subButton").addEventListener("click", submitAnswer)

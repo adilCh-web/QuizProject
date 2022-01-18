@@ -1,4 +1,7 @@
-let qQuestion = [['The river Senne flows through\nwhich capital city:', 'Brussels', ['Copenhagen', 'Amsterdam', 'vienna']]
+
+
+
+export const qQuestion = [['The river Senne flows through\nwhich capital city:', 'Brussels', ['Copenhagen', 'Amsterdam', 'vienna']]
 
 
 
@@ -36,3 +39,6 @@ let qQuestion = [['The river Senne flows through\nwhich capital city:', 'Brussel
  ,['*Christ the Redeemer* is located in which place?','Rio De Janeiro', ['Porto Alegre', 'Salvador', 'Brasilia']]
  ,['Name the city, where Taj Mahal\n is located in India','Agra', ['Varanasi', 'Jaipur','Delhi']]
  ,['What percentage of land area do the mountains cover?', '25%', ['10%', '40%', '70%']]];
+
+
+
