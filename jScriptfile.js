@@ -35,6 +35,8 @@ function randomRange(v1, v2)
 
  function startQuestion()
     {
+ 
+        
 
         round+=1;
         document.getElementById("round").innerHTML = "Round: " + round
@@ -156,9 +158,9 @@ function randomRange(v1, v2)
         
         
         document.getElementById("form").style.display = "none";
-        document.getElementById("btn").style.display = "block";
-        document.getElementById("btn").innerHTML = "Question nr " + Number(round+1);
+
         document.getElementById("info").innerText = ""
+        startQuestion()
         
 
             }, 3000);
