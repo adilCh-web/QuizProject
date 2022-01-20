@@ -134,34 +134,63 @@ function randomRange(v1, v2)
             
         
             // lets empty them again so we can go through the same process again 
-            correct_.length = 0;
-            finalRandomAnswers.length = 0;
-            document.getElementById("question").innerText= ""
-            document.getElementById("countDown").style.fontSize = "50px"
-            document.getElementById("countDown").innerText= 3
-            setTimeout(() => {document.getElementById("countDown").innerText= 2
+        correct_.length = 0;
+        finalRandomAnswers.length = 0;
+        document.getElementById("question").innerText= ""
+        document.getElementById("countDown").style.fontSize = "50px"
+        document.getElementById("countDown").innerText= 3
+        setTimeout(() => {document.getElementById("countDown").innerText= 2
                 
             }, 1000);
-                setTimeout(() => {document.getElementById("countDown").innerText= 1
+        setTimeout(() => {document.getElementById("countDown").innerText= 1
                     
             }, 2000);
             
-            setTimeout(() => {document.getElementById("countDown").innerText= ""
+        setTimeout(() => {document.getElementById("countDown").innerText= ""
                 
             }, 3000);
 
-            document.getElementById("subButton").style.display = "none";
+        document.getElementById("subButton").style.display = "none";
 
 
-            setTimeout(() =>
+        setTimeout(() =>
              {
-          
         
-        
-        document.getElementById("form").style.display = "none";
+            document.getElementById("form").style.display = "none";
 
-        document.getElementById("info").innerText = ""
-        startQuestion()
+            document.getElementById("info").innerText = ""
+
+            if(round<11)
+            {
+                startQuestion()
+            }
+            else
+            {
+            
+                
+                
+
+                if(score < 5)
+                    {
+                        document.getElementById("question").innerText = `Ops You have Scored ${score} out of ${round}\nTry Again`
+                    }
+                else if(round>=5 && round <8)
+                    {
+                        document.getElementById("question").innerText = `well Done\nYou have Scored ${score} out of ${round}`
+                    }
+                else
+                    {
+                        document.getElementById("question").innerText = `Perfect \nYou have Scored ${score} out of ${round}`
+                    }
+                
+                document.getElementById("btn").style.display = "inline-block"
+                round = 0
+                score = 0
+                document.getElementById("btn").innerText = "Play Again!"
+
+
+            
+        }
         
 
             }, 3000);
