@@ -1,8 +1,24 @@
 
 
 
-export const qQuestion = [['The river Senne flows through\nwhich capital city:', 'Brussels', ['Copenhagen', 'Amsterdam', 'vienna']]
-
+export let qQuestion = [
+       ['The river Senne flows through\nwhich capital city:', 'Brussels', ['Copenhagen', 'Amsterdam', 'vienna']]
+,["What measurement scale is used to determine wind speed?","Beaufort scale",["Richter scale","Synoptic scale","Gusting scale"]]
+,["What is the world's fastest species of bird?","Peregrine falcon",["Golden eagle","Frigatebird","Penguin"]]
+,["The human body is made up of approximately how much water?","60%",["40%","70%","50"]]
+,["Which artist famously cut off his own ear?","Vincent Van Gogh",["Claude Monet","Salvador Dali","Pablo Picasso"]]
+,["In 1768, Captain James Cook set out to explore which ocean?","Pacific Ocean",["Atlantic Ocean","Indian Ocean","Arctic Ocean"]]
+,["Which of the following disorders is the fear of being alone?","Agoraphobia",["Aerophobia","Acrophobia","Arachnophobia"]]
+,[" Which of the following is a song by the German heavy metal band “Scorpions”?","Wind of Change",["Hey Jude","Don't Stop Me Now","Stairway to Heaven"]]
+,["What is the speed of sound?","1,200 km/h",["1,500 km/h","900 km/h","700 km/h"]]
+,["Which is the easiest way to tell the age of many trees?","To count the rings on the trunk",["To measure the height of the tree","To measure the width of the tree","To count the number of leaves"]]
+,["Which did Viking people use as money?","Jewellery",["Seal skins","Wool","Rune stones"]]
+,["What was the first country to use tanks in combat during World War I?","Britain",["France","Germany","Japan"]]
+,["Goulash is a type of beef soup in which country?","Hungary",["Czech Republic","Slovakia","Ireland"]]
+,["Which two months are named after Emperors of the Roman Empire?","July and August",["March and April","May and June","January and February"]]
+,["The phrase: ”I think, therefore I am” was coined by which philosopher?","Descartes",["Socrates","Aristole","Plato"]]
+,["Which was the first film by Disney to be produced in colour?","Snow White and the Seven Dwarfs",["Sleeping Beauty","Cindrella","Toy Story"]]
+,["What is the name of the first book of the Old Testament in the Bible?","Genesis",["Exodus","Matthew","Proverbs"]]
 
 
 

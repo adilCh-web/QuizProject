@@ -48,6 +48,7 @@ function randomRange(v1, v2)
         
         let index =  randomRange(0, qQuestion.length-1); 
         let questionWithAnswers = qQuestion[index]; //get random question/its answer/wrong answers
+        qQuestion.splice(index,1) // deleting the question from the arrays questionto avoid duplicate questions
         
 
         let question = questionWithAnswers[0] 
