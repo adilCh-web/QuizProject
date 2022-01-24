@@ -5,7 +5,11 @@ let score = 0;
 let correct_ = []
 let finalRandomAnswers = []
 const correctAnswerSound = new Audio("./tracks/Correct-sound-effect.mp3")
-const wrongtAnswerSound = new Audio("./tracks/fail-buzzer-03.mp3")
+const wrongtAnswerSound = new Audio("./tracks/fail-buzzer-04.mp3")
+const soundTrack = new Audio("./tracks/Thinking-music-full-version.mp3")
+
+
+let formEl = document.getElementById("form")
 
 //function to shuffle an array
 
@@ -24,9 +28,6 @@ function shuffleArray(array) {
     return array;
   }
 
-
-
-
 function randomRange(v1, v2)
     { // min and max included 
         return Math.floor(Math.random() * (v2 - v1 + 1) + v1)
@@ -35,14 +36,14 @@ function randomRange(v1, v2)
 
  function startQuestion()
     {
- 
-        
-
+        soundTrack.play()
+        soundTrack.loop = true
         round+=1;
         document.getElementById("round").innerHTML = "Round: " + round
         document.getElementById("subButton").style.display = "block";
+        document.getElementById("questionAnswers").style.display = "block"  
 
-        document.getElementById("form").style.display = "inline-block";
+        formEl.style.display = "block";
         document.getElementById("btn").style.display = "none";
     
         
@@ -66,11 +67,12 @@ function randomRange(v1, v2)
 
         const divQuestion = document.createElement("div");
         divQuestion.setAttribute("id","divId")
-        document.getElementById("form").appendChild(divQuestion)
+        formEl.appendChild(divQuestion)
 
         for (let i =0;i<shuffledAnswers.length;i++)
         {
             let id = "id"+i
+
             const br = document.createElement("br")
             const label = document.createElement("label")
             label.setAttribute("id", id);
@@ -99,7 +101,7 @@ function randomRange(v1, v2)
         
         //console.log("pressed")
 
-              
+         document.getElementById("questionAnswers").style.display = "none"     
         const radioButtons = document.querySelectorAll('input[name="quiz"]');
 
         let selectedAnswer;
@@ -138,11 +140,11 @@ function randomRange(v1, v2)
         finalRandomAnswers.length = 0;
         document.getElementById("question").innerText= ""
         document.getElementById("countDown").style.fontSize = "50px"
-        document.getElementById("countDown").innerText= 3
-        setTimeout(() => {document.getElementById("countDown").innerText= 2
+        document.getElementById("countDown").innerText= 3 + " . . ."
+        setTimeout(() => {document.getElementById("countDown").innerText= 2 + " . ."
                 
             }, 1000);
-        setTimeout(() => {document.getElementById("countDown").innerText= 1
+        setTimeout(() => {document.getElementById("countDown").innerText= 1 + " ."
                     
             }, 2000);
             
@@ -156,11 +158,11 @@ function randomRange(v1, v2)
         setTimeout(() =>
              {
         
-            document.getElementById("form").style.display = "none";
+            formEl.style.display = "none";
 
             document.getElementById("info").innerText = ""
 
-            if(round<11)
+            if(round<10)
             {
                 startQuestion()
             }
@@ -168,17 +170,17 @@ function randomRange(v1, v2)
             {
             
                 
-                
+                document.getElementById("questionAnswers").style.display = "block"    
 
                 if(score < 5)
                     {
                         document.getElementById("question").innerText = `Ops You have Scored ${score} out of ${round}\nTry Again`
                     }
-                else if(round>=5 && round <8)
+                else if(score >=5 && score <8)
                     {
                         document.getElementById("question").innerText = `well Done\nYou have Scored ${score} out of ${round}`
                     }
-                else
+                else 
                     {
                         document.getElementById("question").innerText = `Perfect \nYou have Scored ${score} out of ${round}`
                     }

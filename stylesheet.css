@@ -40,7 +40,8 @@ figure {
 h3 {font-weight:bold ;
             color:white;
             text-align:left;
-            margin-left:10px}
+            margin:20px 0px 0px 40px;
+        }
 
 
 h2  {
@@ -64,6 +65,7 @@ hr
     background-color: #efbb24;
     border-radius: 50px;
     padding:1rem;
+    margin-bottom:30px;
     border:4px solid black;
     font-weight: bold;
 }
@@ -74,9 +76,13 @@ hr
     color:#efbb24;
     background-color: rgb(8, 8, 8);
     padding:1rem;
-    width:150px;
-    border:4px solid #efbb24;
-    margin:auto auto
+    width:100%;
+    border:1px solid #efbb24;
+    margin:auto auto;
+    }
+    #subButton:hover
+    {
+        background-color:rgb(43, 39, 39)
     }
 
 
@@ -95,16 +101,20 @@ li {list-style: none;}
         }
 main 
     {
-    display: inline-block;
+    
     margin:  auto;
     text-align: center;
     padding:10px;
-    width:100%;
     height:60vh;
     
 } 
 
-
+#questionAnswers
+{
+    background:black;
+    padding:20px 0px 0px 0px;
+    border:5px rgb(43, 39, 39) solid
+}
 
 label 
     {
@@ -112,14 +122,15 @@ label
         font-weight: bolder;
         color:white
     }
-
+    
 #form
 {
-    display:inline-block;
-    text-align: start;
-    margin:auto auto;
+    
+    
     display:none;
+    text-align: start;
     margin-bottom:30px;
+    padding-left:40px;
 }
 
 span

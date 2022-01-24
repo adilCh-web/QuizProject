@@ -19,7 +19,7 @@ export let qQuestion = [
 ,["The phrase: ”I think, therefore I am” was coined by which philosopher?","Descartes",["Socrates","Aristole","Plato"]]
 ,["Which was the first film by Disney to be produced in colour?","Snow White and the Seven Dwarfs",["Sleeping Beauty","Cindrella","Toy Story"]]
 ,["What is the name of the first book of the Old Testament in the Bible?","Genesis",["Exodus","Matthew","Proverbs"]]
-
+,[]
 
 
 ,['How many colors in the Rainbow?', 'Seven', ['One', 'Five', 'Eight']]
